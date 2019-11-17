@@ -1,3 +1,5 @@
+# Code source: https://www.jhanley.com/google-cloud-converting-service-account-credentials-from-p12-to-json-format
+
 import time
 import jwt
 import json
