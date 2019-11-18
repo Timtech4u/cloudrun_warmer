@@ -28,7 +28,7 @@ gcloud scheduler jobs create http cloudrun_warmer_job --schedule "0 * * * *" --u
 - Make requests to each service with a timeout of 5 secs
 
 ## Setting filters
-- To prevent the warmer from making requests to certain service(s), you can add the service image or name to this (file)[filters.py] e.g.
+- To prevent the warmer from making requests to certain service(s), you can add the service image or name to this [file](filters.py) for example:
 ```
 disallowed_services = ['myservice']
 disallowed_images = ['gcr.io/myproject/myimage:latest']
