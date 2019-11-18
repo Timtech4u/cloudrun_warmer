@@ -5,12 +5,10 @@ from auth import getAccessToken
 
 # Get access token from enviroment variable OR
 # Use getAccessToken() method to retrieve access token
-# access_token = os.environ.get("ACCESS_TOKEN", getAccessToken())
-access_token = "ya29.Iq8BsQf8SF-thmm2gICWL3R8MvvOL7T71WNsde7eNmp6uv2LaWuPmFEpay62AySEf9CERQha9rwDgUpmVrmziwEuSofyXirGOZ0Y7wGGvZ9pE95frtzagOG_ea4UmfGpb0TGl7C5StCsnvQxzANch7tMNRYSB8TcUsQEDqhxCQH15r3zEnPDok-dErYyue6R6WCpA3jeyaC4Sf2EeN6WbOsFuIpLXSWcCTc5F7nbcfmaQw"
+access_token = os.environ.get("ACCESS_TOKEN", getAccessToken())
 
 # Get project ID from enviroment variable
-# project_id = os.environ.get("PROJECT_ID")
-project_id = "mercuriemart"
+project_id = os.environ.get("PROJECT_ID")
 
 # Request header using access token
 auth_header = {
