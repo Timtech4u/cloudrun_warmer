@@ -9,7 +9,7 @@ You can read more about how to minimize Cloud Run Cold Starts John's article [he
 Note that this tool best fits when you have multiple Cloud Run services on a project and you do not want to setup individual Cloud Scheduler Jobs to warm each service.
 
 ## How to use
-- [Generate Service Account JSON Key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and update [code](auth.py#L72) OR generate and set access token `ACCESS_TOKEN` [here](main.py#L9) and `PROJECT_ID` [here](main.py#L13) env vars.
+- [Generate Service Account JSON Key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and update [code](auth.py#L72) OR generate and set access token `ACCESS_TOKEN` [here](main.py#L8) and `PROJECT_ID` [here](main.py#L11) env vars.
 
 `gcloud auth application-default print-access-token`
 
