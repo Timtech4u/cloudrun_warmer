@@ -17,7 +17,7 @@ Note that this tool best fits when you have multiple Cloud Run services on a pro
 
 `gcloud functions deploy cloudrun_warmer --runtime python37 --trigger-http`
 
-- Set up Cloud Scheduler Job
+- Set up Cloud Scheduler Job with Function's URL
 ``` 
 gcloud scheduler jobs create http cloudrun_warmer_job --schedule "0 * * * *" --uri "https://us-central1-myproject.cloudfunctions.net/cloudrun_warmer" --http-method GET
 ```
