@@ -1,7 +1,7 @@
 import os
 import requests
 from auth import getAccessToken
-from filters import disallowed_images
+from filters import disallowed_images, disallowed_services
 
 # Get access token from enviroment variable OR
 # Use getAccessToken() method to retrieve access token
@@ -30,6 +30,7 @@ def cloudrun_warmer(request):
         if 'items' in services:
             for service in services['items']:
                 if 'client.knative.dev/user-image' in service['metadata']['annotations'] 
+                    and service['metadata']['name'] not in disallowed_services
                     and service['metadata']['annotations']['client.knative.dev/user-image'] not in disallowed_images:
                     try:
                         # Make request to Cloud Run service domain with a timeout of 5secs
