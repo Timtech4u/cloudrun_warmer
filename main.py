@@ -28,9 +28,7 @@ def cloudrun_warmer(request):
 
         if 'items' in services:
             for service in services['items']:
-                if 'client.knative.dev/user-image' in service['metadata']['annotations'] 
-                    and service['metadata']['name'] not in disallowed_services
-                    and service['metadata']['annotations']['client.knative.dev/user-image'] not in disallowed_images:
+                if 'client.knative.dev/user-image' in service['metadata']['annotations'] and service['metadata']['name'] not in disallowed_service and service['metadata']['annotations']['client.knative.dev/user-image'] not in disallowed_images:
                     try:
                         # Make request to Cloud Run service domain with a timeout of 5secs
                         status = requests.get(
