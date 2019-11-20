@@ -3,9 +3,8 @@ import requests
 from auth import getAccessToken
 from filters import disallowed_images, disallowed_services
 
-# Get access token from enviroment variable OR
-# Use getAccessToken() method to retrieve access token
-access_token = os.environ.get("ACCESS_TOKEN", getAccessToken())
+# Get Token from Secret enviroment variable URI
+access_token = requests.get(os.environ.get("TOKEN_URI")).text
 
 # Get project ID from enviroment variable
 project_id = os.environ.get("PROJECT_ID")
