@@ -40,3 +40,5 @@ disallowed_images = ['gcr.io/myproject/myimage:latest']
 - [Cloud Run API](https://cloud.google.com/run/docs/reference/rest/)
 - [Python Requests](https://github.com/psf/requests)
 - [GCP Access Token Auth](https://gist.github.com/Timtech4u/f38d53671ccbaf802820b2e1f0e3f6c8)
+
+> If you want to complete this steps using a GUI or Cloud Console, check out my article on [Scheduling periodic jobs with Cloud Scheduler ⏰](https://fullstackgcp.com/scheduling-periodic-jobs-with-cloud-scheduler-alarm-clock-ck35lo6g3002eb6s13btat0n3)
